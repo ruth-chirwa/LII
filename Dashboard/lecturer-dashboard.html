@@ -91,7 +91,7 @@
   </a>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
     <li><button class="dropdown-item" onclick="quickLinks('userProfile')">View Profile</button></li>
-    <li><a class="dropdown-item" href="#">Settings</a></li>
+    <li><a class="dropdown-item" onclick="quickLinks('settings')">Settings</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item text-danger" href="login.html">Logout</a></li>
   </ul>
@@ -241,7 +241,7 @@
         <img src="https://via.placeholder.com/100" class="rounded-circle img-fluid" alt="Profile Picture">
       </div>
       <div class="col-md-10">
-        <h5 class="mb-1">Dr. Ruth Mwale</h5>
+        <h5 class="mb-1">Dr. Ruth Chirwa</h5>
         <p class="mb-1"><strong>Department:</strong> Computer Science</p>
         <p class="mb-1"><strong>Email:</strong> ruth.chirwa@lii.mw</p>
         <p class="mb-1"><strong>Office:</strong> Room 304, LII Campus</p>
@@ -257,11 +257,11 @@
   <form>
     <div class="mb-3">
       <label class="form-label">Full Name</label>
-      <input type="text" class="form-control" value="Dr. Ruth Mwale">
+      <input type="text" class="form-control" value="Dr. Ruth Chirwa">
     </div>
     <div class="mb-3">
       <label class="form-label">Email Address</label>
-      <input type="email" class="form-control" value="ruth.mwale@lii.mw">
+      <input type="email" class="form-control" value="ruth.chirwa@lii.mw">
     </div>
     <div class="mb-3">
       <label class="form-label">Department</label>
@@ -567,20 +567,6 @@
     }
   }
  
-  function showProfileOrSetting(sectionId) {
-    // Hide all general sections (if any exist)
-    document.querySelectorAll('.content-section').forEach(section => {
-      section.classList.add('d-none');
-    });
-    // Show the requested profile/settings section
-    const target = document.getElementById(sectionId);
-    if (target) {
-      target.classList.remove('d-none');
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
