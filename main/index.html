@@ -234,6 +234,31 @@
   #backToTopBtn:hover {
     background: #e6b800;
   }
+  .gallery-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 200px;
+}
+
+ .quote-icon {
+    vertical-align: top;
+  }
+  .testimonials .card {
+    transition: transform 0.3s ease-in-out;
+  }
+  .testimonials .carousel-item:hover .card {
+    transform: translateY(-5px);
+  }
+
 </style>
 </head>
 <body>
@@ -271,13 +296,13 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="/pages/about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="programs.html">Programs</a>
+          <a class="nav-link" href="/pages/programs.html">Programs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="/pages/contact.html">Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/authentication/Register.html">Register</a>
@@ -367,80 +392,159 @@
     </div>
   </section>
 
-  <!-- Events -->
-  <section class="container my-5">
-    <h2 class="section-title text-center mb-4">Upcoming Events</h2>
-    <div class="events row g-3 justify-content-center">
-      <div class="col-md-4 event">
-        <h6>Innovation Conference 2025</h6>
-        <p><small>March 15, 2025 | Main Auditorium</small></p>
-        <p>Join thought leaders discussing technology and sustainability challenges.</p>
-      </div>
-      <div class="col-md-4 event">
-        <h6>Open Day & Campus Tour</h6>
-        <p><small>April 10, 2025 | Campus Grounds</small></p>
-        <p>Experience our vibrant community, facilities, and meet faculty and students.</p>
-      </div>
-      <div class="col-md-4 event">
-        <h6>Entrepreneurship Workshop</h6>
-        <p><small>May 22, 2025 | Innovation Hub</small></p>
-        <p>Learn startup essentials from successful local entrepreneurs and mentors.</p>
+<!-- Upcoming Events -->
+<section class="container my-5">
+  <h2 class="section-title mb-4">Upcoming Events</h2>
+  <div class="row g-4">
+    
+    <!-- Event Card -->
+    <div class="col-md-4">
+      <div class="card h-100 border shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="text-muted small"><i class="bi bi-calendar-event me-1"></i>March 15, 2025</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Main Auditorium</span>
+          </div>
+          <h5 class="card-title mb-2 text-dark fw-semibold">Innovation Conference 2025</h5>
+          <p class="card-text text-secondary small">Join thought leaders for discussions on emerging technologies and sustainability in Africa’s digital economy.</p>
+          <a href="#" class="btn btn-sm btn-outline-primary mt-2">Learn More</a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Testimonials -->
-  <section class="container my-5 testimonials">
-    <h2 class="section-title text-center mb-4">What Our Students Say</h2>
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <p>"LII has transformed my career and opened doors to amazing opportunities."</p>
-          <h6>- Grace Mwale, Computer Science</h6>
-        </div>
-        <div class="carousel-item">
-          <p>"The campus community and faculty are incredibly supportive and inspiring."</p>
-          <h6>- James Banda, Environmental Sciences</h6>
-        </div>
-        <div class="carousel-item">
-          <p>"I love the balance of tradition and innovation here. It’s a unique learning experience."</p>
-          <h6>- Chikondi Phiri, Social Innovation</h6>
+    <!-- Event Card -->
+    <div class="col-md-4">
+      <div class="card h-100 border shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="text-muted small"><i class="bi bi-calendar-event me-1"></i>April 10, 2025</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Campus Grounds</span>
+          </div>
+          <h5 class="card-title mb-2 text-dark fw-semibold">Open Day & Campus Tour</h5>
+          <p class="card-text text-secondary small">Prospective students are invited to explore facilities, meet staff, and discover academic life at LII.</p>
+          <a href="#" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </section>
 
-  <!-- Campus Gallery -->
-  <section class="container my-5 gallery">
-    <h2 class="section-title text-center mb-4">Campus Life</h2>
-    <div class="row g-3">
-      <div class="col-sm-6 col-md-3">
-        <img src="img/campus1.jpg" alt="Campus" />
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <img src="img/campus2.jpg" alt="Campus" />
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <img src="img/campus3.jpg" alt="Campus" />
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <img src="img/campus4.jpg" alt="Campus" />
+    <!-- Event Card -->
+    <div class="col-md-4">
+      <div class="card h-100 border shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <span class="text-muted small"><i class="bi bi-calendar-event me-1"></i>May 22, 2025</span>
+            <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Innovation Hub</span>
+          </div>
+          <h5 class="card-title mb-2 text-dark fw-semibold">Entrepreneurship Workshop</h5>
+          <p class="card-text text-secondary small">Build entrepreneurial skills with insights from successful founders, mentors, and investors.</p>
+          <a href="#" class="btn btn-sm btn-outline-primary mt-2">Register</a>
+        </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
+
+
+ <!-- Testimonials -->
+<section class="container my-5 testimonials">
+  <h2 class="section-title text-center mb-4">What Our Students Say</h2>
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card p-4 border-0 shadow-sm bg-light mx-auto" style="max-width: 700px;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="/img/student1.jpg" alt="Grace Mwale" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <div>
+              <h6 class="mb-0 fw-semibold">Grace Mwale</h6>
+              <small class="text-muted">BSc Computer Science</small>
+            </div>
+          </div>
+          <p class="fst-italic mb-0">
+            <i class="bi bi-quote quote-icon text-warning me-2 fs-4"></i>
+            LII has transformed my career and opened doors to amazing opportunities.
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card p-4 border-0 shadow-sm bg-light mx-auto" style="max-width: 700px;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="/img/student2.jpg" alt="James Banda" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <div>
+              <h6 class="mb-0 fw-semibold">James Banda</h6>
+              <small class="text-muted">BSc Environmental Sciences</small>
+            </div>
+          </div>
+          <p class="fst-italic mb-0">
+            <i class="bi bi-quote quote-icon text-warning me-2 fs-4"></i>
+            The campus community and faculty are incredibly supportive and inspiring.
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card p-4 border-0 shadow-sm bg-light mx-auto" style="max-width: 700px;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="/img/student3.jpg" alt="Chikondi Phiri" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <div>
+              <h6 class="mb-0 fw-semibold">Chikondi Phiri</h6>
+              <small class="text-muted">BA Social Innovation</small>
+            </div>
+          </div>
+          <p class="fst-italic mb-0">
+            <i class="bi bi-quote quote-icon text-warning me-2 fs-4"></i>
+            I love the balance of tradition and innovation here. It’s a unique learning experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+
+ <!-- Campus Gallery -->
+<section class="container my-5 gallery">
+  <h2 class="section-title text-center mb-4">Campus Life</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-md-3">
+      <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <img src="/img/campus-1.jpg" class="img-fluid w-100 gallery-img" alt="Campus Life 1" />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <img src="/img/campus-2.jpg" class="img-fluid w-100 gallery-img" alt="Campus Life 2" />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <img src="/img/campus-3.jpg" class="img-fluid w-100 gallery-img" alt="Campus Life 3" />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="gallery-item position-relative overflow-hidden rounded shadow-sm">
+        <img src="/img/campus-4.jpg" class="img-fluid w-100 gallery-img" alt="Campus Life 4" />
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Final Call to Action -->
   <section class="container text-center my-5">
     <h3>Ready to start your journey at LII?</h3>
-    <a href="register.html" class="btn btn-primary btn-lg mt-3">Apply Now</a>
+    <a href="/authentication/Register.html" class="btn btn-primary btn-lg mt-3">Apply Now</a>
   </section>
 
   <!-- Footer -->
