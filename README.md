@@ -1,5 +1,4 @@
 # Likoma Institute of Innovation
-A creative project imagining a future-facing innovation institute on Likoma Island - website prototype
 
 Welcome to the official repository of the Likoma Institute of Innovation!  
 
