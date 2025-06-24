@@ -82,8 +82,8 @@
                             <label>Login as </label>
                             <select class="form-select" id="role" required>
                             <option value="" disabled selected>Select Role</option>
-                             <option value="Student">Student</option>
-                            <option value="Lecturer">Lecturer</option>
+                             <option value="student">Student</option>
+                            <option value="lecturer">Lecturer</option>
                              </select>
 
                         </div>
@@ -109,51 +109,26 @@
     </div>
 <script>
     
-let users = [];
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-function handleLogin(event) {
-    event.preventDefault();
+  const role = document.getElementById('role').value;
+  
+  if (!role) {
+    alert('Please select your role.');
+    return;
+  }
 
-    // Get form values
-    const email = document.querySelector('input[type="email"]').value;
-    const password = document.querySelector('input[type="password"]').value;
-    const role = document.getElementById('role').value;
+  // Save role to localStorage
+  localStorage.setItem('userRole', role);
 
-    // Check if user exists and credentials match
-    const user = users.find(u => u.email === email && u.password === password && u.role === role);
-
-    if (user) {
-        // Store the role in localStorage 
-        localStorage.setItem('userRole', role);
-
-        if (role === "Student") {
-            window.location.href = "studentDashboard.html";
-        } else if (role === "Lecturer") {
-            window.location.href = "lecturerDashboard.html";
-        }
-    } else {
-        alert("Invalid email, password, or role. Please try again or register first.");
-    }
-}
-
-// Function to sync with registration data
-function syncWithRegistration() {
-   
-    const registeredRole = localStorage.getItem('userRole');
-    if (registeredRole) {
-        const email = prompt("Enter the email used during registration:");
-        const password = prompt("Enter the password used during registration:");
-        if (email && password) {
-            users.push({ email, password, role: registeredRole });
-            localStorage.removeItem('userRole'); 
-            alert("You can now log in.");
-        }
-    }
-}
-
-
-document.addEventListener('DOMContentLoaded', syncWithRegistration);
-document.getElementById('loginForm').addEventListener('submit', handleLogin);
+  // Redirect based on role
+  if (role === 'student') {
+    window.location.href = '../Dashboard/studentDashboard.html';
+  } else if (role === 'lecturer') {
+    window.location.href = '../Dashboard/lecturer-dashboard.html';
+  }
+});
 </script>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
