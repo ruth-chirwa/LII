@@ -56,9 +56,7 @@ We’re excited to build a vibrant community of learners, innovators, and change
 
 Stay connected with us for updates, events, and opportunities:
 
-- Website: [Insert URL]
-- Email: [Insert contact email]
-- Social Media: [Insert links]
+- Website: [https://likoma-institute-of-innovation.netlify.app/]
 
 ---
 
