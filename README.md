@@ -1,4 +1,4 @@
-# Likoma Institute of Innovation
+# Likoma Institute of Innovation (Hackathon project)
 
 Welcome to the official repository of the Likoma Institute of Innovation!  
 
